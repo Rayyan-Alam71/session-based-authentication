@@ -46,21 +46,27 @@ This Express backend uses Prisma for database access and Redis for simple sessio
 npm install
 ```
 
-2. Environment variables (example `.env`):
+2. Spin the containers for local development
+
+```bash
+docker compose up
+```
+
+3. Environment variables (example `.env`):
 
 ```
 DATABASE_URL=postgresql://user:pass@localhost:5432/dbname
 REDIS_URL=redis://localhost:6379
 ```
 
-3. Generate Prisma client and build TypeScript:
+4. Generate Prisma client and build TypeScript:
 
 ```bash
 npx prisma generate
 tsc -b
 ```
 
-4. Start the app (built output):
+5. Start the app (built output):
 
 ```bash
 node dist/index.js
